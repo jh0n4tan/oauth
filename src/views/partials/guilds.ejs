@@ -1,0 +1,17 @@
+<div>
+    <% user.guilds.forEach((x)=>{ %>
+        <h3> <%= x.name %> - <%= x.id %> </h3>        
+        <% if(x.icon.substring(0,2) === 'a_'){ %>
+            <img src="https://cdn.discordapp.com/icons/<%= x.id %>/<%= x.icon %>.gif" alt="" />
+        <% }else{ %>
+            <img src="https://cdn.discordapp.com/icons/<%= x.id %>/<%= x.icon %>.png" alt="" />
+        <% } %>
+
+        <ul>
+        <% x.features.forEach((y)=>{ %>
+            <li> <%= y %> </li>
+        <% }) %>
+        </ul>
+        
+    <% }) %>
+    </div>
